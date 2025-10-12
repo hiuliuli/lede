@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 处理器计数
-        run: echo '处理器计数：$(nproc)'
+        run: echo '处理器计数：'$(nproc)
       - name: 磁盘可用空间
         run: df -h
