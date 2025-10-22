@@ -61,4 +61,12 @@ echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
 
+# 自定义
+uci set network.lan.proto='dhcp'
+uci set network.lan.type='bridge'
+uci set network.lan.netmask='255.255.255.0'
+uci set network.lan.dns='223.5.5.5'
+uci set network.lan.ifname='eth0'
+uci commit network
+
 exit 0
